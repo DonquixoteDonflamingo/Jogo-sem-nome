@@ -2,7 +2,7 @@
 
 const char g_szClassName[] = "myWindowClass";
 
-// Step 4: the Window Procedure
+// Step 4: o procedimento de janela
 LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
     switch(msg)
@@ -26,7 +26,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
     HWND hwnd;
     MSG Msg;
 
-    //Step 1: Registering the Window Class
+    //Step 1: Registrando a classe Janela
     wc.cbSize        = sizeof(WNDCLASSEX);
     wc.style         = 0;
     wc.lpfnWndProc   = WndProc;
@@ -66,7 +66,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
     ShowWindow(hwnd, nCmdShow);
     UpdateWindow(hwnd);
 
-    // Step 3: The Message Loop
+    // Step 3: O loop da mensagem 
     while(GetMessage(&Msg, NULL, 0, 0) > 0)
     {
         TranslateMessage(&Msg);
@@ -76,3 +76,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 }
 
 // Codigo copiado do link - http://www.winprog.org/tutorial/simple_window.html :)
+
+/*  Explicação do código - 
+    cbSize - O tamanho da estrutura.
+    style - Class Styles (), não deve ser confundido com Window Styles ().
+    Isso geralmente pode ser definido como. CS_*WS_*0
+    lpfnWndProc - Ponteiro para o procedimento de janela para essa classe de janela.
+    cbClsExtra - Amount of extra data allocated for this class in memory. Usually . 0*/
