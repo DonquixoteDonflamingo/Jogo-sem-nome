@@ -51,9 +51,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
     hwnd = CreateWindowEx(
         WS_EX_CLIENTEDGE,
         g_szClassName,
-        "PORNOZÃO DO SEIB",
+        "SEIB alpha lobo macho alha supremo!",
         WS_OVERLAPPEDWINDOW,
-        CW_USEDEFAULT, CW_USEDEFAULT, 240, 120,
+        CW_USEDEFAULT, CW_USEDEFAULT, 1280, 720,
         NULL, NULL, hInstance, NULL);
 
     if(hwnd == NULL)
@@ -82,4 +82,13 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
     style - Class Styles (), não deve ser confundido com Window Styles ().
     Isso geralmente pode ser definido como. CS_*WS_*0
     lpfnWndProc - Ponteiro para o procedimento de janela para essa classe de janela.
-    cbClsExtra - Amount of extra data allocated for this class in memory. Usually . 0*/
+    cbClsExtra - Amount of extra data allocated for this class in memory. Usually . 0
+    cbWndExtra - Quantidade de dados extras alocados na memória por janela desse tipo. Normalmente. 0
+    hInstance - Identificador para a instância do aplicativo (que obtivemos no primeiro parâmetro de ). WinMain()
+    hIcon - Ícone grande (geralmente 32x32) mostrado quando o usuário pressiona Alt+Tab.
+    hCursor - Cursor que será exibido sobre nossa janela.
+    hbrBackground - Pincel de fundo para definir a cor da nossa janela.
+    lpszMenuName - Nome de um recurso de menu a ser usado para as janelas com essa classe.
+    lpszClassName - Nome com o qual identificar a classe.
+    hIconSm - Ícone pequeno (geralmente 16x16) para mostrar na barra de tarefas e no canto superior esquerdo da janela.
+    */
