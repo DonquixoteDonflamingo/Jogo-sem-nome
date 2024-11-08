@@ -1,0 +1,3 @@
+#include <recurso.h>
+
+IDI_MY_ICON "meu_icone.ico"
